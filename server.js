@@ -6,6 +6,7 @@ require('dotenv').config();
 const app = express();
 const userController = require('./controllers/users.js');
 const sessionsController = require('./controllers/sessions.js');
+const showsController = require('./controllers/shows.js');
 const session = require('express-session');
 
 // Configuration
@@ -37,6 +38,7 @@ app.get('/', (req, res) => {
 
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
+app.use('/app', showsController);
 
 // Listen
 app.listen(PORT, () => console.log('auth happening on port', PORT));
