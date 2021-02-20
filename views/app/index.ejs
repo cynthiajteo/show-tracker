@@ -5,5 +5,33 @@
     </head>
     <body>
         <h1>INDEX</h1>
+        <div class="index-container">
+            <div class="add-btn">
+                <a href="/app/new"><button id="add">Add New Show</button></a>
+            </div>
+            <ul id="index-ul">
+                <% for(let i = 0; i < shows.length; i++) { %>
+                <li class="show-item">
+                    <a href="/app/<%=shows[i].id; %>" id="index-name">
+                        <%=shows[i].title;%></a
+                    ><br />
+
+                    <!-- <a href="/products/<%=products[i].id; %>">
+                        <img
+                            id="index-img"
+                            src="<%=products[i].img%>"
+                            alt="<%=products[i].name%>"
+                        />
+                    </a>
+
+                    <br />
+                    <span id="index-price"
+                        >Price: $<%=products[i].price%>
+                    </span>
+                    <br /> -->
+                </li>
+                <% } %>
+            </ul>
+        </div>
     </body>
 </html>

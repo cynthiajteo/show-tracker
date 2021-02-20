@@ -1,8 +1,30 @@
 const express = require('express');
 const shows = express.Router();
-const Show = require('../models/users.js');
+const Show = require('../models/shows.js');
+const User = require('../models/users.js');
+const bcrypt = require('bcrypt');
 
-// normal routes will be in this file
+// seed data
+// shows.get('/seed', async (req, res) => {
+//     const newShow = [
+//         {
+//             title: 'Dynasty',
+//             url:
+//                 'https://static.wikia.nocookie.net/dynastytv/images/f/f5/Season2Poster.jpg/revision/latest/scale-to-width-down/768?cb=20180914201628',
+//             category: 'family drama',
+//             episode: 'Season 2, Episode 3',
+//             completed: false,
+//             reviews: 'crazy rich family drama',
+//         },
+//     ];
+
+//     try {
+//         const seedItem = await Show.create(newShow);
+//         res.send(seedItem);
+//     } catch (err) {
+//         res.send(err.message);
+//     }
+// });
 
 // new route
 shows.get('/new', (req, res) => {
@@ -11,19 +33,29 @@ shows.get('/new', (req, res) => {
 
 // create route
 shows.post('/', (req, res) => {
-    Show.create(req.body, (error, createdProduct) => {
-        // res.send(createdProduct);
+    Show.create(req.body, (error, createdShow) => {
+        // res.send(createdShow);
         res.redirect('/app');
     });
 });
 
 // index route
+// shows.get('/', (req, res) => {
+//     Show.find({}, (error, allShows) => {
+//         res.render('index.ejs', {
+//             shows: allShows,
+//         });
+//     });
+// });
+
 shows.get('/', (req, res) => {
-    Show.find({}, (error, allShows) => {
-        res.render('index.ejs', {
-            shows: allShows,
+    if (req.session.currentUser) {
+        Show.find({}, (error, allShows) => {
+            res.render('index.ejs', { shows: allShows });
         });
-    });
+    } else {
+        res.redirect('/sessions/new');
+    }
 });
 
 // show route

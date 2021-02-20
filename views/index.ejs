@@ -10,9 +10,9 @@
                 <% if(currentUser) { %> Welcome <%=currentUser.username%>!
                 <br />
                 <h2>
-                    <a class="waves-effect waves-light btn" href="/app"
-                        >Show me my shows!</a
-                    >
+                    <a class="dashboard" href="/app">
+                        <button>Shows Dashboard</button>
+                    </a>
                 </h2>
                 <form action="/sessions?_method=DELETE" method="POST">
                     <input

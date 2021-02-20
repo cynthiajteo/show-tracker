@@ -8,7 +8,7 @@ const showSchema = Schema(
         category: { type: String, required: true },
         episode: { type: String, required: true },
         completed: { type: Boolean, default: false },
-        reviews: { type: string },
+        reviews: { type: String },
     },
     { timestamps: true },
 );

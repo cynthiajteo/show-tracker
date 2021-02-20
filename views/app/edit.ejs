@@ -5,5 +5,45 @@
     </head>
     <body>
         <h1>Edit Show</h1>
+        <div class="edit-container">
+            <div class="edit-form">
+                <form action="/app/<%=show.id%>?_method=PUT" method="POST">
+                    Title:
+                    <input
+                        type="text"
+                        name="title"
+                        value="<%=show.title%>"
+                    /><br />
+                    Image Url:
+                    <input type="text" name="url" value="<%=show.url%>" /><br />
+                    Category:
+                    <input
+                        type="text"
+                        name="category"
+                        value="<%=show.category%>"
+                    /><br />
+                    Episode:
+                    <input
+                        type="text"
+                        name="episode"
+                        value="<%=show.episode%>"
+                    /><br />
+                    Completed:
+                    <input
+                        type="checkbox"
+                        name="completed"
+                        value="<%=show.completed%>"
+                    /><br />
+                    Reviews:
+                    <input
+                        type="text"
+                        name="reviews"
+                        value="<%=show.reviews%>"
+                    /><br />
+                    <input type="submit" name="" value="Submit Changes" />
+                </form>
+                <a href="/app"><button id="home-btn">Home</button></a>
+            </div>
+        </div>
     </body>
 </html>
