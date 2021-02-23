@@ -17,12 +17,12 @@ router.get('/new', (req, res) => {
 });
 
 // create route
-// router.post('/', (req, res) => {
-//     User.create(req.body, (error, createdShow) => {
-//         // res.send(createdShow);
-//         res.redirect('/app');
-//     });
-// });
+router.post('/', (req, res) => {
+    User.create(req.body, (error, createdShow) => {
+        res.send(createdShow);
+        // res.redirect('/app');
+    });
+});
 
 // index route
 router.get('/', isAuthenticated, (req, res) => {
@@ -30,8 +30,7 @@ router.get('/', isAuthenticated, (req, res) => {
     User.find({}, (err, foundUsers) => {
         // renders the dashboard
         res.render('app/index.ejs', {
-            // passes the found users to the room page
-            users: foundUsers,
+            currentUser: req.session.currentUser,
         });
     });
 });

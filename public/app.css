@@ -15,8 +15,8 @@ h1 {
     font-size: 18px;
     margin: 0 auto;
     padding: 1cm;
-    height: 520px;
-    width: 350px;
+    height: 620px;
+    width: 450px;
     border-radius: 2em;
     border: 1px solid black;
     box-shadow: 1px 1px 10px rgb(8, 109, 224), -1px -1px 10px rgb(29, 32, 243),
@@ -44,4 +44,11 @@ input {
 #add:hover {
     background-color: rgb(179, 203, 255);
     color: red;
+}
+
+#logout-btn {
+    width: 155px;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
