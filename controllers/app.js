@@ -12,9 +12,9 @@ const isAuthenticated = (req, res, next) => {
 };
 
 // new route
-// router.get('/new', (req, res) => {
-//     res.render('app/new.ejs');
-// });
+router.get('/new', (req, res) => {
+    res.render('app/new.ejs');
+});
 
 // create route
 // router.post('/', (req, res) => {
