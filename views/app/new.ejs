@@ -5,5 +5,19 @@
     </head>
     <body>
         <h1>Add New Show</h1>
+        <div class="new-show">
+            <form action="/app" method="POST">
+                Title: <input type="text" name="title" /><br />
+                Image Url: <input type="text" name="url" /><br />
+                Category: <input type="text" name="category" /><br />
+                Episode: <input type="text" name="episode" /><br />
+                Completed: <input type="checkbox" name="completed" /> <br />
+                Reviews:
+                <input type="text" name="reviews" /><br />
+                <input type="submit" name="" value="Add" id="add" />
+                <br />
+            </form>
+            <a href="/app"><button id="home">Dashboard</button></a>
+        </div>
     </body>
 </html>
