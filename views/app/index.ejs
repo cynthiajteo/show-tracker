@@ -5,15 +5,16 @@
     </head>
     <body>
         <h1><%=currentUser.username%>'s Show Stopper</h1>
+        <div class="action-btn">
+            <a href="/app/new"
+                ><button id="index-add">Add New Show</button></a
+            >
+            <form action="/sessions?_method=DELETE" method="POST">
+                <input type="submit" value="Logout" id="logout-btn" />
+            </form>
+        </div>
         <div class="index-container">
-            <div class="action-btn">
-                <a href="/app/new"
-                    ><button id="index-add">Add New Show</button></a
-                >
-                <form action="/sessions?_method=DELETE" method="POST">
-                    <input type="submit" value="Logout" id="logout-btn" />
-                </form>
-            </div>
+            
             <div class="index-shows">
                 <ul id="index-ul">
                     <% for(let i = 0; i <currentUser.shows.length; i++) { %> 
