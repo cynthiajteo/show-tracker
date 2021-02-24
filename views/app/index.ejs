@@ -18,18 +18,27 @@
                 <ul id="index-ul">
                     <% for(let i = 0; i <currentUser.shows.length; i++) { %> 
                         <li class="index-show">
-                            <a href="/app/<%=currentUser.shows[i]._id; %>" id="index-title">
+                            Title: <a href="/app/<%=currentUser.shows[i]._id; %>" id="index-title">
                                 <%=currentUser.shows[i].title; %> </a>
                             <br />
-                            
+
                             <a href="/app/<%=currentUser.shows[i]._id; %>">
                                 <img
                                     id="index-img"
-                                    src="<%=currentUser.shows[i].img%>"
+                                    src="<%=currentUser.shows[i].url%>"
                                     alt="<%=currentUser.shows[i].title%>"
                                 />
                             </a>
                             <br />
+                            <a href="/products/<%=currentUser.shows[i]._id%>/edit"
+                                ><button>Edit</button></a
+                            >
+                            <form
+                    action="/products/<%=currentUser.shows[i]._id%>?_method=DELETE"
+                    method="POST"
+                >
+                    <input type="submit" id="delete-btn" value="DELETE" />
+                </form>
                         </li>
                     <%}%>
                 </ul>

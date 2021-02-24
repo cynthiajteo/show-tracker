@@ -52,3 +52,15 @@ input {
     background-color: black;
     color: white;
 }
+
+#index-img {
+    width: 250px;
+    border-radius: 15%;
+    padding: 1.5em;
+}
+
+#index-img:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
