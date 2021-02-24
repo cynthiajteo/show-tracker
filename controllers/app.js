@@ -11,12 +11,12 @@ const isAuthenticated = (req, res, next) => {
     }
 };
 
-// new route
+// new route - new show form
 router.get('/new', (req, res) => {
     res.render('app/new.ejs');
 });
 
-// create route - NEED TO FIX (add in completed checkbox)
+// create route - adding new show to a user's db - NEED TO FIX (add in completed checkbox)
 router.post('/', (req, res) => {
     User.findOneAndUpdate(
         { _id: req.session.currentUser._id },
@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
     );
 });
 
-// index route
+// index route - shows user's main page
 router.get('/', isAuthenticated, (req, res) => {
     // finds all users
     User.find({}, (err, foundUsers) => {

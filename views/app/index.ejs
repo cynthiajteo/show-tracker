@@ -14,8 +14,25 @@
                     <input type="submit" value="Logout" id="logout-btn" />
                 </form>
             </div>
-            <div class="shows-container">
-                
+            <div class="index-shows">
+                <ul id="index-ul">
+                    <% for(let i = 0; i <currentUser.shows.length; i++) { %> 
+                        <li class="index-show">
+                            <a href="/app/<%=currentUser.shows[i]._id; %>" id="index-title">
+                                <%=currentUser.shows[i].title; %> </a>
+                            <br />
+                            
+                            <a href="/app/<%=currentUser.shows[i]._id; %>">
+                                <img
+                                    id="index-img"
+                                    src="<%=currentUser.shows[i].img%>"
+                                    alt="<%=currentUser.shows[i].title%>"
+                                />
+                            </a>
+                            <br />
+                        </li>
+                    <%}%>
+                </ul>
             </div>
         </div>
     </body>
