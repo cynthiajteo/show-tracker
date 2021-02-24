@@ -16,12 +16,25 @@ router.get('/new', (req, res) => {
     res.render('app/new.ejs');
 });
 
-// create route
+// create route - NEED TO FIX (add in completed checkbox)
 router.post('/', (req, res) => {
-    User.create(req.body, (error, createdShow) => {
-        res.send(createdShow);
-        // res.redirect('/app');
-    });
+    User.findOneAndUpdate(
+        { _id: req.session.currentUser._id },
+        {
+            $push: {
+                shows: {
+                    title: req.body.title,
+                    url: req.body.url,
+                    season: req.body.season,
+                    episode: req.body.episode,
+                    reviews: req.body.reviews,
+                },
+            },
+        },
+        (error, newShow) => {
+            res.redirect('/app');
+        },
+    );
 });
 
 // index route
