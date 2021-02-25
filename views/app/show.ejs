@@ -4,6 +4,20 @@
         <%- include('../partials/head.ejs') %>
     </head>
     <body>
-        <h1></h1>
+        <h1><%=show.title%></h1>
+        <div class="show-container">
+            <div class="show-item">
+                <img
+                    id="show-img"
+                    src="<%=show.url%>
+                "
+                    alt="<%=show.title%>"
+                />
+                <br />
+                <div class="show-info">
+                    
+                </div>
+            </div>
+        </div>
     </body>
 </html>
