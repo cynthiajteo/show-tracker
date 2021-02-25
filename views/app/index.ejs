@@ -4,13 +4,23 @@
         <%- include('../partials/head.ejs') %>
     </head>
     <body>
-        <h1><%=currentUser.username%>'s Show Stopper</h1>
-        <div class="header-nav">
-            <a href="/app/new"><button id="index-add">Add New Show</button></a>
-            <form action="/sessions?_method=DELETE" method="POST">
-                <input type="submit" value="Logout" id="logout-btn" />
-            </form>
+        <div class="header">
+            <div class="header-title">
+                <img src="https://img.icons8.com/ios/452/retro-tv.png" alt="tv icon" />
+                <h1><%=currentUser.username%>'s Show Stopper</h1>
+            </div>
         </div>
+        <div class="header-nav">
+            <ul>
+                <li>
+                    <form action="/sessions?_method=DELETE" method="POST">
+                        <input type="submit" value="Logout" id="logout-btn" />
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+        <a href="/app/new"><button id="index-add">Add New Show</button></a>
         <div class="index-container">
             <div class="index-shows">
                 <ul id="index-ul">
