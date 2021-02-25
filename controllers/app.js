@@ -18,6 +18,9 @@ router.get('/new', (req, res) => {
 
 // create route - adding new show to a user's db - NEED TO FIX (add in completed checkbox)
 router.post('/', (req, res) => {
+    if (req.body.completed === 'on') {
+        req.body.completed = true;
+    }
     User.findOneAndUpdate(
         { _id: req.session.currentUser._id },
         {
@@ -28,9 +31,11 @@ router.post('/', (req, res) => {
                     season: req.body.season,
                     episode: req.body.episode,
                     reviews: req.body.reviews,
+                    completed: req.body.completed,
                 },
             },
         },
+
         (error, newShow) => {
             res.redirect('/app');
         },
@@ -64,6 +69,17 @@ router.get('/', isAuthenticated, (req, res) => {
 //     });
 // });
 
+// router.delete('/:id', (req, res) => {
+//     User.findByIdAndRemove(
+//         {
+//             _id: req.session.currentUser._id,
+//         },
+//         (error, data) => {
+//             res.redirect('/app');
+//         },
+//     );
+// });
+
 // edit route
 // router.get('/:id/edit', (req, res) => {
 //     User.findById(req.params.id, (error, foundShow) => {
@@ -73,7 +89,7 @@ router.get('/', isAuthenticated, (req, res) => {
 //     });
 // });
 
-// put edit
+// put route
 // router.put('/:id', (req, res) => {
 //     const index = req.params.id;
 //     User.findByIdAndUpdate(
