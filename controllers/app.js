@@ -1,4 +1,5 @@
 const express = require('express');
+const { Mongoose } = require('mongoose');
 const router = express.Router();
 const User = require('../models/users.js');
 
@@ -53,14 +54,16 @@ router.get('/', isAuthenticated, (req, res) => {
 });
 
 // show route
-// router.get('/:id', (req, res) => {
-//     User.findById(req.params.id, (error, foundShow) => {
-//         res.render('app/show.ejs', {
-//             currentUser: req.session.currentUser,
-//             show: foundShow,
-//         });
-//     });
-// });
+router.get('/:id', (req, res) => {
+    console.log(req.params.id);
+    User.find(
+        { shows: Mongoose.Types.ObjectId(req.params.id) },
+        (err, foundShow) => {
+            // res.render('app/show.ejs');
+            console.log(foundShow);
+        },
+    );
+});
 
 // delete route
 // router.delete('/:id', (req, res) => {
