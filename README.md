@@ -27,17 +27,17 @@ Mongo DB
 
 ## Challenges:
 
+
 ## Known Issues:
 
+
 ## Screenshots:
+
 
 ## RESTful Routes:
 | No. | Route | URL | HTTP Verb | Description
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 1. | Index  |  /  |  GET | Home Page  |
 
-
-No.    Route    URL    HTTP Verb    Description
-1    Index    /    GET    Home Page
 
 ## Further Improvements:
