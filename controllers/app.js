@@ -35,7 +35,6 @@ router.post('/', (req, res) => {
                 },
             },
         },
-        { new: true },
         (error, newShow) => {
             res.redirect('/app');
         },
@@ -45,10 +44,10 @@ router.post('/', (req, res) => {
 // index route - shows user's main page
 router.get('/', isAuthenticated, (req, res) => {
     // finds all users
-    User.find({}, (err, foundUsers) => {
+    User.findById({ _id: req.session.currentUser._id }, (err, currentUser) => {
         // renders the dashboard
         res.render('app/index.ejs', {
-            currentUser: req.session.currentUser,
+            currentUser: currentUser,
         });
     });
 });
@@ -56,24 +55,17 @@ router.get('/', isAuthenticated, (req, res) => {
 // show route
 // router.get('/:id', (req, res) => {
 //     User.findById(req.params.id, (error, foundShow) => {
-//         res.render('show.ejs', {
+//         res.render('app/show.ejs', {
+//             currentUser: req.session.currentUser,
 //             show: foundShow,
 //         });
 //     });
 // });
 
-// delete route - NEED TO FIX
-// router.delete('/:id', (req, res) => {
-//     User.findByIdAndRemove(req.params.id, (error, data) => {
-//         res.redirect('/app');
-//     });
-// });
-
+// delete route
 // router.delete('/:id', (req, res) => {
 //     User.findByIdAndRemove(
-//         {
-//             shows: req.session.currentUser._id.shows._id,
-//         },
+//         { _id: req.session.currentUser.shows._id },
 //         (error, data) => {
 //             res.redirect('/app');
 //         },
@@ -89,7 +81,7 @@ router.get('/', isAuthenticated, (req, res) => {
 //     });
 // });
 
-// put route
+// put route - update
 // router.put('/:id', (req, res) => {
 //     const index = req.params.id;
 //     User.findByIdAndUpdate(
@@ -107,5 +99,5 @@ module.exports = router;
 /*-----WIP-----*/
 /*
 - work on delete, edit, show routes
-- check why doesnt page refresh after adding new shows
+
 */
