@@ -29,6 +29,7 @@ router.post('/', (req, res) => {
                 shows: {
                     title: req.body.title,
                     url: req.body.url,
+                    category: req.body.category,
                     season: req.body.season,
                     episode: req.body.episode,
                     reviews: req.body.reviews,
@@ -95,13 +96,25 @@ router.delete('/:id', (req, res) => {
 });
 
 // edit route
-// router.get('/:id/edit', (req, res) => {
-//     User.findById(req.params.id, (error, foundShow) => {
-//         res.render('edit.ejs', {
-//             show: foundShow,
-//         });
-//     });
-// });
+router.get('/:id/edit', (req, res) => {
+    console.log(req.session.currentUser._id);
+    //console.log(req.params._id);
+    User.find(
+        { _id: req.session.currentUser._id },
+        {
+            shows: {
+                $elemMatch: { _id: req.params.id },
+            },
+        },
+        { 'shows.$': 1 },
+        function (error, user) {
+            //console.log(user[0].shows[0]);
+            res.render('app/edit.ejs', {
+                show: user[0].shows[0],
+            });
+        },
+    );
+});
 
 // put route - update
 // router.put('/:id', (req, res) => {

@@ -161,7 +161,6 @@ input {
 /* ===== NEW SHOW FORM * ===== */
 .title h1 {
     text-align: center;
-    padding-bottom: 15px;
 }
 
 .show-container {
@@ -171,6 +170,7 @@ input {
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .show-item {
@@ -193,7 +193,7 @@ input {
 
 .show-info {
     text-align: left;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .show-reviews {

@@ -45,10 +45,22 @@
                     <span id="season">Season <%=show.season%></span>
                     <span id="episode">Episode <%=show.episode%></span><br />
                     <span id="completed">
-                        <% if(show.completed === true) { %> Completed: &#10003;
-                        <% } else { %> Completed: &#10008; <% } %>
+                        <% if(show.completed === true) { %> Completed Series:
+                        &#10003; <% } else { %> Completed Series: &#10008; <% }
+                        %>
                     </span>
                     <br />
+                    <br />
+                    <a href="/app/<%=show._id%>/edit"
+                        ><button>Edit Show</button></a
+                    >
+                    <form
+                        action="/app/<%=show.
+            _id%>?_method=DELETE"
+                        method="POST"
+                    >
+                        <input type="submit" id="delete-btn" value="DELETE" />
+                    </form>
                 </div>
             </div>
             <div class="show-reviews">
