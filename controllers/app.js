@@ -16,7 +16,7 @@ router.get('/new', (req, res) => {
     res.render('app/new.ejs');
 });
 
-// create route - adding new show to a user's db - NEED TO FIX (add in completed checkbox)
+// create route - adding new show to a user's db
 router.post('/', (req, res) => {
     if (req.body.completed === 'on') {
         req.body.completed = true;
@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
                 },
             },
         },
-
+        { new: true },
         (error, newShow) => {
             res.redirect('/app');
         },
@@ -62,7 +62,7 @@ router.get('/', isAuthenticated, (req, res) => {
 //     });
 // });
 
-// delete route
+// delete route - NEED TO FIX
 // router.delete('/:id', (req, res) => {
 //     User.findByIdAndRemove(req.params.id, (error, data) => {
 //         res.redirect('/app');
@@ -72,7 +72,7 @@ router.get('/', isAuthenticated, (req, res) => {
 // router.delete('/:id', (req, res) => {
 //     User.findByIdAndRemove(
 //         {
-//             _id: req.session.currentUser._id,
+//             shows: req.session.currentUser._id.shows._id,
 //         },
 //         (error, data) => {
 //             res.redirect('/app');
@@ -96,10 +96,16 @@ router.get('/', isAuthenticated, (req, res) => {
 //         req.params.id,
 //         req.body,
 //         { new: true },
-//         (err, updatedProduct) => {
+//         (err, updatedShow) => {
 //             res.redirect(`/app/${index}`);
 //         },
 //     );
 // });
 
 module.exports = router;
+
+/*-----WIP-----*/
+/*
+- work on delete, edit, show routes
+- check why doesnt page refresh after adding new shows
+*/
