@@ -9,13 +9,13 @@
 
 
 ## Technologies Used:
-bcrypt
-express
-express-sessions
-method-override
-mongoose
-ejs
-dotenv
+* bcrypt
+* express
+* express-sessions
+* method-override
+* mongoose
+* ejs
+* dotenv
 
 ## Database:
 Mongo DB
