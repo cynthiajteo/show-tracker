@@ -97,13 +97,12 @@ input {
     background-color: black;
     color: white;
     position: absolute;
-    top: 10px;
+    top: 25px;
     right: 10px;
-    width: 155px;
+    width: 105px;
 }
 
 /*---------INDEX PAGE---------*/
-
 .index-container {
     display: inline-flex;
     flex-wrap: wrap;
@@ -157,4 +156,76 @@ input {
     margin: 0 auto;
     height: 38px;
     font-size: 14px;
+}
+
+/* ===== NEW SHOW FORM * ===== */
+.title h1 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.show-container {
+    text-align: center;
+    display: inline-flex;
+    height: 800px;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.show-item {
+    height: 90%;
+    width: 380px;
+    padding: 25px 15px 0px 15px;
+    border-radius: 1em;
+    margin: 0 auto;
+    font-size: 24px;
+    box-shadow: 1px 1px 10px rgb(8, 109, 224), -1px -1px 10px rgb(29, 32, 243),
+        1px -1px 10px rgb(109, 136, 252), -1px 1px 10px rgb(58, 13, 223);
+}
+
+#show-img {
+    width: 350px;
+    height: 420px;
+    border-radius: 10%;
+    padding-bottom: 10px;
+}
+
+.show-info {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.show-reviews {
+    height: 90%;
+    width: 450px;
+    padding: 25px 15px 0px 15px;
+    border-radius: 1em;
+    margin: 0 auto;
+    font-size: 24px;
+    box-shadow: 1px 1px 10px rgb(8, 109, 224), -1px -1px 10px rgb(29, 32, 243),
+        1px -1px 10px rgb(109, 136, 252), -1px 1px 10px rgb(58, 13, 223);
+}
+
+.review {
+    text-align: left;
+    width: 430px;
+    height: 90%;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+#home-btn {
+    position: absolute;
+    top: 30px;
+    right: 140px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+#home-btn:hover {
+    background-color: rgb(180, 219, 255);
 }

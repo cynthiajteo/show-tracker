@@ -70,7 +70,7 @@ router.get('/:id', (req, res) => {
             'shows.$': 1,
         },
         function (err, results) {
-            console.log(results[0].shows[0]);
+            // console.log(results[0].shows[0]);
             res.render('app/show.ejs', {
                 show: results[0].shows[0],
             });
