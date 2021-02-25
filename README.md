@@ -1,9 +1,9 @@
 # Show Stopper
 ## About the app:
-
+This app is targeted toward users who watch multiple TV series concurrently and want to keep track of their shows. They may also leave reviews for each particular shows.
 
 ## App Link:
-
+https://show-stopper.herokuapp.com/ 
 
 ## Wireframe:
 
