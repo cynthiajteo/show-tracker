@@ -7,6 +7,14 @@ This app is targeted toward users who watch multiple TV series concurrently and 
 ## Table of Content
 
 -   [App Link](https://github.com/cynthiajteo/show-tracker#app-link)
+-   [Technologies Used](https://github.com/cynthiajteo/show-tracker#technologies-used)
+-   [Database](https://github.com/cynthiajteo/show-tracker#database)
+-   [Wireframe](https://github.com/cynthiajteo/show-tracker#wireframe)
+-   [Approach Taken](https://github.com/cynthiajteo/show-tracker#approach-taken)
+-   [Challenges](https://github.com/cynthiajteo/show-tracker#challenges)
+-   [Screenshots](https://github.com/cynthiajteo/show-tracker#screenshots)
+-   [RESTful Routes](https://github.com/cynthiajteo/show-tracker#restful-routes)
+-   [Further Improvements](https://github.com/cynthiajteo/show-tracker#further-improvements)
 
 ## App Link:
 
@@ -58,6 +66,7 @@ https://show-stopper.herokuapp.com/
 ## Challenges:
 
 -   Acessing shows as it's nested in User schema
+-   Realizing too late that split models will definitely make accessibility easier
 
 ## Screenshots:
 
@@ -102,5 +111,6 @@ https://show-stopper.herokuapp.com/
 
 ## Further Improvements:
 
--   different user interactions (e.g. commenting on other users' page)
--   input option to upload photos instead of using url
+-   Split models and use reference instead
+-   Different user interactions (e.g. commenting on other users' page)
+-   Input option to upload photos instead of using url
