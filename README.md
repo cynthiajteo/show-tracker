@@ -10,6 +10,9 @@ https://show-stopper.herokuapp.com/
 
 ## Wireframe:
 
+-   Landing Page
+    ![Landing Page](img/wireframe/main.png)
+
 ## Technologies Used:
 
 -   bcrypt
@@ -40,25 +43,25 @@ https://show-stopper.herokuapp.com/
 ## Screenshots:
 
 -   Main App Landing Page
-    ![Landing Page](img/landing.png)
+    ![Landing Page](img/screenshots/landing.png)
 
 -   Login Page
-    ![Log In Page](img/log-in.png)
+    ![Log In Page](img/screenshots/log-in.png)
 
 -   Sign Up Page
-    ![Sign Up Page](img/sign-up.png)
+    ![Sign Up Page](img/screenshots/sign-up.png)
 
 -   Authenticated User Page
-    ![Authenticated User Page](img/authenticated.png)
+    ![Authenticated User Page](img/screenshots/authenticated.png)
 
 -   User Dashboard
-    ![User Dashboard](img/dashboard.png)
+    ![User Dashboard](img/screenshots/dashboard.png)
 
 -   Add New Show Form
-    ![Add New Show](img/add-show.png)
+    ![Add New Show](img/screenshots/add-show.png)
 
 -   Edit Show Form
-    ![Edit Show](img/edit-show.png)
+    ![Edit Show](img/screenshots/edit-show.png)
 
 ## RESTful Routes:
 
