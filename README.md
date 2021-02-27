@@ -4,28 +4,47 @@
 
 This app is targeted toward users who watch multiple TV series concurrently and want to keep track of their shows. They may also leave reviews for each particular shows.
 
+## Table of Content
+
+-   [App Link](https://github.com/cynthiajteo/show-tracker#app-link)
+
 ## App Link:
 
 https://show-stopper.herokuapp.com/
+
+## Technologies Used:
+
+-   Bcrypt
+-   Express
+-   Express-session
+-   Method-override
+-   Mongoose
+-   EJS
+-   Dotenv
+
+## Database:
+
+-   MongoDB
 
 ## Wireframe:
 
 -   Landing Page
     ![Landing Page](img/wireframe/main.png)
 
-## Technologies Used:
+-   Login Page
+    ![Login Page](img/wireframe/login.png)
 
--   bcrypt
--   express
--   express-sessions
--   method-override
--   mongoose
--   ejs
--   dotenv
+-   Dashboard
+    ![Dashboard](img/wireframe/dashboard.png)
 
-## Database:
+-   Show Route
+    ![Show Page](img/wireframe/show.png)
 
--   MongoDB
+-   Add New Show
+    ![New Show Form](img/wireframe/new.png)
+
+-   Edit Show
+    ~[Edit Show Form](img/wireframe/edit.png)
 
 ## Approach Taken:
 
