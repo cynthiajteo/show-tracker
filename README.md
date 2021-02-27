@@ -47,10 +47,10 @@ https://show-stopper.herokuapp.com/
     ![Landing Page](img/landing.png)
 
 -   Login Page
-    ![Log In Page](img/login.png)
+    ![Log In Page](img/log-in.png)
 
 -   Sign Up Page
-    ![Sign Up Page](img/signup.png)
+    ![Sign Up Page](img/sign-up.png)
 
 -   Authenticated User Page
     ![Authenticated User Page](img/authenticated.png)
