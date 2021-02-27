@@ -1,10 +1,10 @@
 # Show Stopper
 
-## About the app:
+## About the App:
 
 This app is targeted toward users who watch multiple TV series concurrently and want to keep track of their shows. They may also leave reviews for each particular shows.
 
-## Table of Content
+## Table of Contents
 
 -   [App Link](https://github.com/cynthiajteo/show-tracker#app-link)
 -   [Technologies Used](https://github.com/cynthiajteo/show-tracker#technologies-used)
@@ -56,12 +56,12 @@ https://show-stopper.herokuapp.com/
 
 ## Approach Taken:
 
--   do up basic wireframe to visualize app
--   set up basic MVC structure with basic CRUD routes
--   set up database in MongoDB
--   set up authentication page
--   linked app to Heroku
--   test app functions
+-   Do up basic wireframe to visualize app
+-   Set up basic MVC structure with basic CRUD routes
+-   Set up database in MongoDB
+-   Set up authentication page
+-   Test app functions
+-   Link app to Heroku
 
 ## Challenges:
 
