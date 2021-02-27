@@ -112,27 +112,7 @@ body {
 }
 
 /* ===== LOG IN PAGE * ===== */
-.new-session {
-    font-size: 18px;
-    margin: 0 auto;
-    padding: 30px;
-    height: 300px;
-    width: 300px;
-    border-radius: 2em;
-    border: 1px solid black;
-    box-shadow: 1px 1px 10px rgb(8, 109, 224), -1px -1px 10px rgb(29, 32, 243),
-        1px -1px 10px rgb(109, 136, 252), -1px 1px 10px rgb(58, 13, 223);
-}
-
-input[name='username'] {
-    width: 300px;
-}
-
-input[name='password'] {
-    width: 300px;
-}
-
-/* ===== SIGN UP PAGE * ===== */
+.new-session,
 .new-user {
     font-size: 18px;
     margin: 0 auto;
@@ -141,8 +121,17 @@ input[name='password'] {
     width: 300px;
     border-radius: 2em;
     border: 1px solid black;
+    background-color: rgb(220, 234, 255);
     box-shadow: 1px 1px 10px rgb(8, 109, 224), -1px -1px 10px rgb(29, 32, 243),
         1px -1px 10px rgb(109, 136, 252), -1px 1px 10px rgb(58, 13, 223);
+}
+
+.submit {
+    font-size: 12px;
+}
+
+#back-btn {
+    font-size: 12px;
 }
 
 input[name='username'] {
