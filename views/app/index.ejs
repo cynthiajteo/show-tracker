@@ -19,10 +19,9 @@
                 </li>
             </ul>
         </div>
-
-        <a href="/app/new"><button id="index-add">Add New Show</button></a>
         <div class="index-container">
             <div class="index-shows">
+                <a href="/app/new"><button id="index-add">Add New Show</button></a>
                 <ul id="index-ul">
                     <% for(let i = 0; i <currentUser.shows.length; i++) { %> 
                         <li class="index-show">
@@ -39,7 +38,7 @@
                             </a>
                             <br />
                             <a href="/app/<%=currentUser.shows[i]._id%>/edit"
-                                ><button>Edit</button></a
+                                ><button id="edit">Edit</button></a
                             >
                             <form
                             action="/app/<%=currentUser.shows[i]._id%>?_method=DELETE"

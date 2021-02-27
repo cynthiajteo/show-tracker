@@ -13,30 +13,51 @@
                 <a href="/">Show Stopper</a>
             </div>
         </div>
-        <div class="container">
-            <div class="welcome"></div>
-            <h2>
-                <% if(currentUser) { %> Welcome, <%=currentUser.username%>!
-                <br />
+        <div class="main-container">
+            <div class="main-col">
                 <h2>
-                    <a class="dashboard" href="/app">
-                        <button>Shows Dashboard</button>
-                    </a>
+                    <% if(currentUser) { %> Welcome, <%=currentUser.username%>!
+                    <br />
+                    <h2>
+                        <a class="dashboard" href="/app">
+                            <button>Shows Dashboard</button>
+                        </a>
+                    </h2>
+                    <form action="/sessions?_method=DELETE" method="POST">
+                        <input type="submit" value="Logout" id="logout-btn" />
+                    </form>
                 </h2>
-                <form action="/sessions?_method=DELETE" method="POST">
-                    <input type="submit" value="Logout" id="logout-btn" />
-                </form>
-            </h2>
-            <% } else { %>
-            <h2>Are you new here?</h2>
-            <a class="waves-effect waves-light btn" href="/users/new">
-                <button>Sign Up</button>
-            </a>
-            <h3>Welcome Back!</h3>
-            <a class="waves-effect waves-light btn" href="/sessions/new">
-                <button>Log In</button>
-            </a>
-            <% } %>
+
+                <% } else { %>
+
+                <h1>What is Show Stopper?</h1>
+                <div class="articles">
+                    <article>
+                        Show Stopper is a platform for you to track all the TV
+                        series that you're currently watching.
+                    </article>
+                    <br />
+                    <article>
+                        If you're someone who watches multiple TV series and
+                        can't keep track, this platform is perfect for you.
+                        <br /><br />What are you waiting for!
+                    </article>
+                    <br />
+                </div>
+            </div>
+            <div class="main-col">
+                <h3>Welcome Back</h3>
+                <a href="/sessions/new">
+                    <button id="login">Log In</button>
+                </a>
+                <br />
+                <h3>Join Now!</h3>
+                <a href="/users/new">
+                    <button id="signup">Sign Up</button>
+                </a>
+
+                <% } %>
+            </div>
         </div>
     </body>
 </html>

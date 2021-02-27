@@ -5,6 +5,58 @@ body {
     background-color: #eef8ff;
 }
 
+/* ===== APP MAIN * ===== */
+.main-container {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 200px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.main-col {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 500px;
+    text-align: left;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.main-app {
+    display: block;
+}
+
+.articles {
+    font-size: 16px;
+}
+
+#login {
+    font-size: 14px;
+}
+
+#login:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#signup {
+    background-color: rgb(0, 63, 156);
+    color: white;
+    font-size: 14px;
+}
+
+#signup:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 /* ===== HEADER * ===== */
 .header {
     display: flex;
@@ -78,6 +130,10 @@ input[name='password'] {
         1px -1px 10px rgb(109, 136, 252), -1px 1px 10px rgb(58, 13, 223);
 }
 
+.title {
+    padding-top: 1em;
+}
+
 #home {
     font-size: 12px;
 }
@@ -119,10 +175,29 @@ input {
     width: 105px;
 }
 
+button:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 /* ===== DASHBOARD * ===== */
+#index-add {
+    font-size: 14px;
+
+    width: 180px;
+    border-radius: 1em;
+}
+
+#index-add:hover {
+    box-shadow: 1px 1px 10px rgb(8, 109, 224), -1px -1px 10px rgb(29, 32, 243),
+        1px -1px 10px rgb(109, 136, 252), -1px 1px 10px rgb(58, 13, 223);
+}
+
 .index-container {
     display: inline-flex;
     flex-wrap: wrap;
+    flex-direction: row;
     text-align: center;
     justify-content: center;
     margin: 0 auto;
@@ -131,15 +206,16 @@ input {
 }
 
 #index-ul {
-    width: 80%;
+    width: 90%;
     display: inline-flex;
     list-style: none;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .index-show {
     width: 450px;
-    height: 560px;
+    height: 580px;
     font-size: 20px;
     border-radius: 2em;
     margin: 20px;
@@ -155,9 +231,9 @@ input {
 
 #index-img {
     width: 300px;
-    height: 350px;
-    border-radius: 15%;
-    padding-bottom: 1.5em;
+    height: 370px;
+
+    padding-bottom: 30px;
 }
 
 #index-img:hover {
@@ -167,12 +243,30 @@ input {
 }
 
 #delete-btn {
-    color: white;
-    background-color: tomato;
-    width: 110px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 127, 104);
+    width: 120px;
     margin: 0 auto;
     height: 38px;
     font-size: 14px;
+}
+
+#delete-btn:hover {
+    background-color: red;
+}
+
+#edit {
+    width: 120px;
+    font-size: 14px;
+}
+
+#edit:hover {
+    background-color: rgb(96, 157, 248);
+    color: rgb(0, 0, 0);
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ===== SHOW PAGE * ===== */
@@ -211,6 +305,11 @@ input {
 .show-info {
     text-align: left;
     padding-left: 15px;
+}
+
+.show-btns {
+    text-align: left;
+    padding-left: 4.5em;
 }
 
 .show-reviews {
