@@ -1,5 +1,6 @@
 const express = require('express');
 const { Mongoose } = require('mongoose');
+const { update } = require('../models/users.js');
 const router = express.Router();
 const User = require('../models/users.js');
 
@@ -98,7 +99,6 @@ router.delete('/:id', (req, res) => {
 // edit route
 router.get('/:id/edit', (req, res) => {
     // console.log(req.session.currentUser._id);
-
     User.find(
         { _id: req.session.currentUser._id },
         {
@@ -117,23 +117,44 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // put route - update
-// router.put('/:id', (req, res) => {
-//     const index = req.params.id;
-//     User.findByIdAndUpdate(
-//         req.params.id,
-//         req.body,
-//         { new: true },
-//         (err, updatedShow) => {
-//             res.redirect(`/app/${index}`);
-//         },
-//     );
-// });
+router.put('/:id', (req, res) => {
+    const catFromForm = req.body.category;
+    const category = catFromForm.split(',');
+    const userID = req.session.currentUser._id;
+    const showID = req.params.id;
+    // console.log('this is res.params.id ' + req.params.id);
+    // console.log('this is user object id ' + req.session.currentUser._id);
+    if (req.body.completed === 'on') {
+        req.body.completed = true;
+    }
+    User.updateOne(
+        { _id: userID, 'shows._id': showID },
+        {
+            $set: {
+                'shows.$.title': req.body.title,
+                'shows.$.url': req.body.url,
+                'shows.$.category': category,
+                'shows.$.season': req.body.season,
+                'shows.$.episode': req.body.episode,
+                'shows.$.reviews': req.body.reviews,
+                'shows.$.completed': req.body.completed,
+            },
+        },
+        { new: true },
+        (err, updatedShow) => {
+            // if (err) console.log(err);
+            // else res.send(updatedShow);
+            res.redirect('/app/' + req.params.id);
+        },
+    );
+});
+
+router.put('/:id', (req, res) => {});
 
 module.exports = router;
 
 /*-----WIP-----*/
 /*
 - work on put/update route
-- work on index.ejs "add new show" button
 
 */

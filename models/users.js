@@ -9,7 +9,7 @@ const userSchema = Schema(
             {
                 title: { type: String },
                 url: { type: String },
-                category: { type: String },
+                category: [{ type: String }],
                 season: { type: Number },
                 episode: { type: Number },
                 completed: { type: Boolean, default: false },
