@@ -11,9 +11,36 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     width: 90%;
-    height: 200px;
+    height: 300px;
     justify-content: space-around;
     text-align: center;
+}
+
+.main-img {
+    height: 200px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard {
+    width: 100%;
+    text-align: center;
+}
+
+#dashboard-btn {
+    font-size: 14px;
+    width: 180px;
+    border-radius: 1em;
+    border: 2px solid blue;
+    background-color: rgb(203, 243, 255);
+}
+
+#dashboard-btn:hover {
+    box-shadow: 1px 1px 10px rgb(8, 109, 224), -1px -1px 10px rgb(29, 32, 243),
+        1px -1px 10px rgb(109, 136, 252), -1px 1px 10px rgb(58, 13, 223);
 }
 
 .main-col {
@@ -205,9 +232,10 @@ button:hover {
 /* ===== DASHBOARD * ===== */
 #index-add {
     font-size: 14px;
-
     width: 180px;
     border-radius: 1em;
+    border: 2px solid blue;
+    background-color: rgb(203, 243, 255);
 }
 
 #index-add:hover {
@@ -252,14 +280,52 @@ button:hover {
 
 #index-img {
     width: 300px;
-    height: 370px;
-    padding-bottom: 2.5em;
+    height: 380px;
+    padding-bottom: 1.5em;
 }
 
 #index-img:hover {
-    -ms-transform: scale(1.1);
+    /* -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    transform: scale(1.1); */
+    animation: shake 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }
 
 #delete-btn {
