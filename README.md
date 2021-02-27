@@ -37,10 +37,6 @@ https://show-stopper.herokuapp.com/
 
 -   Acessing shows as it's nested in User schema
 
-## Known Issues:
-
--   none so far
-
 ## Screenshots:
 
 -   Main App Landing Page
