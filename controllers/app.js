@@ -122,8 +122,8 @@ router.put('/:id', (req, res) => {
     const category = catFromForm.split(',');
     const userID = req.session.currentUser._id;
     const showID = req.params.id;
-    // console.log('this is res.params.id ' + req.params.id);
-    // console.log('this is user object id ' + req.session.currentUser._id);
+    // console.log('this is show id ' + req.params.id);
+    // console.log('this is user id ' + req.session.currentUser._id);
     if (req.body.completed === 'on') {
         req.body.completed = true;
     }
@@ -152,9 +152,3 @@ router.put('/:id', (req, res) => {
 router.put('/:id', (req, res) => {});
 
 module.exports = router;
-
-/*-----WIP-----*/
-/*
-- work on put/update route
-
-*/

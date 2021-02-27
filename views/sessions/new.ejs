@@ -14,46 +14,50 @@
             </div>
         </div>
         <div class="container">
+            <div class="title">
+                <h1>Welcome Back!</h1>
+            </div>
             <br />
-            <h1>Welcome Back!</h1>
-            <div class="row">
-                <form class="col s12" action="/sessions" method="POST">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <label for="username">User Name</label>
-                            <input
-                                placeholder="username"
-                                id="username"
-                                type="text"
-                                class="validate"
-                                name="username"
-                                required
-                            />
+            <div class="new-session">
+                <div class="row">
+                    <form class="col s12" action="/sessions" method="POST">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <label for="username">User Name</label>
+                                <input
+                                    placeholder="username"
+                                    id="username"
+                                    type="text"
+                                    class="validate"
+                                    name="username"
+                                    required
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <label for="password">Password</label>
-                            <input
-                                placeholder="password"
-                                id="password"
-                                type="password"
-                                class="validate"
-                                name="password"
-                                required
-                            />
+                        <br />
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="password">Password</label>
+                                <input
+                                    placeholder="password"
+                                    id="password"
+                                    type="password"
+                                    class="validate"
+                                    name="password"
+                                    required
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <br />
-                    <button
-                        class="btn waves-effect waves-light"
-                        type="submit"
-                        name="action"
-                    >
-                        Submit
-                    </button>
-                </form>
+                        <br />
+                        <button
+                            class="btn waves-effect waves-light"
+                            type="submit"
+                            name="action"
+                        >
+                            Submit
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
