@@ -55,14 +55,22 @@ body {
     list-style-type: none;
 }
 
+/* ===== LOG IN PAGE * ===== */
+input[name='username'] {
+    width: 300px;
+}
+
+input[name='password'] {
+    width: 300px;
+}
+
 /* ===== NEW SHOW FORM * ===== */
 
 .new-show {
     font-size: 18px;
     margin: 0 auto;
-    margin-top: 2em;
     padding: 20px;
-    height: 620px;
+    height: 650px;
     width: 450px;
     border-radius: 2em;
     border: 1px solid black;
@@ -72,6 +80,15 @@ body {
 
 #home {
     font-size: 12px;
+}
+
+input[name='add'] {
+    width: 120px;
+}
+
+input[name='reviews'] {
+    height: 130px;
+    overflow: auto;
 }
 
 input {
@@ -102,7 +119,7 @@ input {
     width: 105px;
 }
 
-/*---------INDEX PAGE---------*/
+/* ===== DASHBOARD * ===== */
 .index-container {
     display: inline-flex;
     flex-wrap: wrap;
@@ -158,7 +175,7 @@ input {
     font-size: 14px;
 }
 
-/* ===== NEW SHOW FORM * ===== */
+/* ===== SHOW PAGE * ===== */
 .title h1 {
     text-align: center;
 }

@@ -4,14 +4,39 @@
         <%- include('../partials/head.ejs') %>
     </head>
     <body>
-        <h1>Add New Show</h1>
+        <div class="header">
+            <div class="header-title">
+                <img
+                    src="https://img.icons8.com/ios/452/retro-tv.png"
+                    alt="tv icon"
+                />
+                <a href="/">Show Stopper</a>
+            </div>
+        </div>
+        <div class="title">
+            <h1>Add New Show</h1>
+        </div>
+        <div class="header-nav">
+            <ul>
+                <li>
+                    <form action="/sessions?_method=DELETE" method="POST">
+                        <input type="submit" value="Logout" id="logout-btn" />
+                    </form>
+                </li>
+                <li>
+                    <a href="/app">
+                        <button id="home-btn">Dashboard</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
         <div class="new-show">
             <form action="/app" method="POST">
-                Title: <input type="text" name="title" /><br />
-                Image Url: <input type="text" name="url" /><br />
-                Category: <input type="text" name="category" /><br />
-                Season: <input type="number" name="season" /><br />
-                Episode: <input type="number" name="episode" /><br />
+                Title: <input type="text" name="title" required /><br />
+                Image Url: <input type="text" name="url" required /><br />
+                Category: <input type="text" name="category" required /><br />
+                Season: <input type="number" name="season" required /><br />
+                Episode: <input type="number" name="episode" required /><br />
                 Completed Series: <input type="checkbox" name="completed" />
                 <br />
                 Reviews:
@@ -19,7 +44,6 @@
                 <input type="submit" name="add" value="add" />
                 <br />
             </form>
-            <a href="/app"><button id="home">Dashboard</button></a>
         </div>
     </body>
 </html>

@@ -97,8 +97,8 @@ router.delete('/:id', (req, res) => {
 
 // edit route
 router.get('/:id/edit', (req, res) => {
-    console.log(req.session.currentUser._id);
-    //console.log(req.params._id);
+    // console.log(req.session.currentUser._id);
+
     User.find(
         { _id: req.session.currentUser._id },
         {
@@ -133,6 +133,7 @@ module.exports = router;
 
 /*-----WIP-----*/
 /*
-- work on delete, edit, show routes
+- work on put/update route
+- work on index.ejs "add new show" button
 
 */
