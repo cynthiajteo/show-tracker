@@ -14,12 +14,12 @@ const isAuthenticated = (req, res, next) => {
 };
 
 // new route - new show form
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
     res.render('app/new.ejs');
 });
 
 // create route - adding new show to a user's db
-router.post('/', (req, res) => {
+router.post('/', isAuthenticated, (req, res) => {
     if (req.body.completed === 'on') {
         req.body.completed = true;
     }
@@ -56,7 +56,7 @@ router.get('/', isAuthenticated, (req, res) => {
 });
 
 // show route
-router.get('/:id', (req, res) => {
+router.get('/:id', isAuthenticated, (req, res) => {
     //console.log(req.session.currentUser._id);
     //console.log(req.params._id);
     User.find(
@@ -81,7 +81,7 @@ router.get('/:id', (req, res) => {
 });
 
 // delete route
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
     User.findByIdAndUpdate(
         { _id: req.session.currentUser._id },
         { $pull: { shows: { _id: req.params.id } } },
@@ -97,7 +97,7 @@ router.delete('/:id', (req, res) => {
 });
 
 // edit route
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isAuthenticated, (req, res) => {
     // console.log(req.session.currentUser._id);
     User.find(
         { _id: req.session.currentUser._id },
@@ -117,7 +117,7 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // put route - update
-router.put('/:id', (req, res) => {
+router.put('/:id', isAuthenticated, (req, res) => {
     const catFromForm = req.body.category;
     const category = catFromForm.split(',');
     const userID = req.session.currentUser._id;
@@ -148,7 +148,5 @@ router.put('/:id', (req, res) => {
         },
     );
 });
-
-router.put('/:id', (req, res) => {});
 
 module.exports = router;
