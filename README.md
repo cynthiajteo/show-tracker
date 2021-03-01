@@ -9,11 +9,13 @@ This app is targeted toward users who watch multiple TV series concurrently and 
 -   [App Link](https://github.com/cynthiajteo/show-tracker#app-link)
 -   [Technologies Used](https://github.com/cynthiajteo/show-tracker#technologies-used)
 -   [Database](https://github.com/cynthiajteo/show-tracker#database)
--   [Wireframe](https://github.com/cynthiajteo/show-tracker#wireframe)
+-   [Objective](https://github.com/cynthiajteo/show-tracker#objective)
 -   [Approach Taken](https://github.com/cynthiajteo/show-tracker#approach-taken)
--   [Challenges](https://github.com/cynthiajteo/show-tracker#challenges)
+-   [Wireframe](https://github.com/cynthiajteo/show-tracker#wireframe)
 -   [Screenshots](https://github.com/cynthiajteo/show-tracker#screenshots)
 -   [RESTful Routes](https://github.com/cynthiajteo/show-tracker#restful-routes)
+-   [Accomplishments](https://github.com/cynthiajteo/show-tracker#accomplishments)
+-   [Challenges](https://github.com/cynthiajteo/show-tracker#challenges)
 -   [Further Improvements](https://github.com/cynthiajteo/show-tracker#further-improvements)
 
 ## App Link:
@@ -22,17 +24,32 @@ https://show-stopper.herokuapp.com/
 
 ## Technologies Used:
 
--   Bcrypt
--   Express
--   Express-session
--   Method-override
--   Mongoose
--   EJS
--   Dotenv
+-   **Bcrypt** is a password-hashing function
+-   **Express** is a back end web application framework for Node.js
+-   **Express-session** is used to store the user state with each given being assigned a unique session
+-   **Method-override** is used to to convert HTTP verbs such as PUT or DELETE in places where the client doesn't support it
+-   **Mongoose** is an Object Data Modeling (ODM) library for MongoDB and Node.
+-   **EJS** is a simple templating language that lets you generate HTML markup with plain JavaScript
+-   **Dotenv** is a zero-dependency module that loads environment variables. It allows you to separate secrets from source code
+-   **Skeleton** is used for CSS framework for HTML and CSS design templates
 
 ## Database:
 
--   MongoDB
+-   **MongoDB** is a document-oriented NoSQL database that is used to store large amounts of data.
+
+## Objective:
+
+-   Make a full CRUD (Create, Read, Update and Delete) using Node.js, MongoDB, Express and EJS that adheres to MVC (Models, Views, and Controllers) file structure
+-   Use a CSS framework
+
+## Approach Taken:
+
+-   Do up basic wireframe to visualize app
+-   Set up basic MVC structure with basic CRUD routes
+-   Set up database in MongoDB
+-   Set up authentication page
+-   Test app functions
+-   Link app to Heroku
 
 ## Wireframe:
 
@@ -53,20 +70,6 @@ https://show-stopper.herokuapp.com/
 
 -   Edit Show
     ~[Edit Show Form](img/wireframe/edit.png)
-
-## Approach Taken:
-
--   Do up basic wireframe to visualize app
--   Set up basic MVC structure with basic CRUD routes
--   Set up database in MongoDB
--   Set up authentication page
--   Test app functions
--   Link app to Heroku
-
-## Challenges:
-
--   Acessing shows as it's nested in User schema
--   Realizing too late that split models will definitely make accessibility easier
 
 ## Screenshots:
 
@@ -109,8 +112,18 @@ https://show-stopper.herokuapp.com/
 | 7.  | Destroy | /sessions         | DELETE    | Destroys session and redirect to /                           |
 |     |         | /app/:showID      | DELETE    | Deletes requested show in database and redirects to Dasboard |
 
+## Accomplishments:
+
+-   The app meets the Minimum Viable Product's (MVP) requirements
+-   User is able to create/edit/delete show
+
+## Challenges:
+
+-   Acessing shows as it's nested in User schema
+-   Realizing too late that split models will definitely make accessibility easier
+
 ## Further Improvements:
 
 -   Split models and use reference instead
--   Different user interactions (e.g. commenting on other users' page)
+-   Social App: Different user interactions (e.g. commenting on other users' page)
 -   Input option to upload photos instead of using url
