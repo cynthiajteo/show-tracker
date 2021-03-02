@@ -4,7 +4,7 @@ const { update } = require('../models/users.js');
 const router = express.Router();
 const User = require('../models/users.js');
 
-//MIDDLEWARE
+// MIDDLEWARE
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {
         return next();
@@ -55,7 +55,7 @@ router.get('/', isAuthenticated, (req, res) => {
     });
 });
 
-// show route
+// show route - shows selected tv show
 router.get('/:id', isAuthenticated, (req, res) => {
     //console.log(req.session.currentUser._id);
     //console.log(req.params._id);
@@ -80,7 +80,7 @@ router.get('/:id', isAuthenticated, (req, res) => {
     );
 });
 
-// delete route
+// delete route - deletes selected tv show
 router.delete('/:id', isAuthenticated, (req, res) => {
     User.findByIdAndUpdate(
         { _id: req.session.currentUser._id },
@@ -96,7 +96,7 @@ router.delete('/:id', isAuthenticated, (req, res) => {
     );
 });
 
-// edit route
+// edit route - edit form: reflects current data in edit form
 router.get('/:id/edit', isAuthenticated, (req, res) => {
     // console.log(req.session.currentUser._id);
     User.find(
@@ -116,7 +116,7 @@ router.get('/:id/edit', isAuthenticated, (req, res) => {
     );
 });
 
-// put route - update
+// put route - updates tv show from edit form
 router.put('/:id', isAuthenticated, (req, res) => {
     const catFromForm = req.body.category;
     const category = catFromForm.split(',');
