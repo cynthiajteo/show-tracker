@@ -126,7 +126,8 @@ router.put('/:id', isAuthenticated, (req, res) => {
     // console.log('this is user id ' + req.session.currentUser._id);
     if (req.body.completed === 'on') {
         req.body.completed = true;
-    }
+    } else req.body.completed = false;
+
     User.updateOne(
         { _id: userID, 'shows._id': showID },
         {
