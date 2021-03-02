@@ -2,7 +2,7 @@
 
 ## About the App:
 
-This app is targeted toward users who watch multiple TV series concurrently and want to keep track of their shows. They may also leave reviews for each particular shows.
+This app is designed to be a personal app targeted towards users who watch multiple TV series concurrently and want to keep track of their shows
 
 ## Table of Contents
 
@@ -35,7 +35,7 @@ https://show-stopper.herokuapp.com/
 
 ## Database:
 
--   **MongoDB** is a document-oriented NoSQL database that is used to store large amounts of data.
+-   **MongoDB** is a document-oriented NoSQL database that is used to store large amounts of data
 
 ## Objective:
 
@@ -96,21 +96,21 @@ https://show-stopper.herokuapp.com/
 
 ## RESTful Routes:
 
-| No. | Route   | URL               | HTTP Verb | Description                                                  |
-| --- | ------- | ----------------- | --------- | ------------------------------------------------------------ |
-| 1.  | Index   | /                 | GET       | Main App Landing Page                                        |
-|     |         | /app              | GET       | App Dashboard                                                |
-| 2.  | New     | /sessions/new     | GET       | Log In Form                                                  |
-|     |         | /users/new        | GET       | Sign Up Form                                                 |
-|     |         | /app/new          | GET       | Add New Show Form                                            |
-| 3.  | Create  | /sessions         | POST      | Authenticates credentials against database and redirect to / |
-|     |         | /users            | POST      | Records new user into database and redirect to /             |
-|     |         | /app              | POST      | Creates new show and redirect to /app                        |
-| 4.  | Show    | /app/:showID      | GET       | Displays requested show                                      |
-| 5.  | Edit    | /app/:showID/edit | GET       | Edit Form - Show Information /                               |
-| 6.  | Update  | /app/:showID      | PUT       | Updates show and redirects to show page                      |
-| 7.  | Destroy | /sessions         | DELETE    | Destroys session and redirect to /                           |
-|     |         | /app/:showID      | DELETE    | Deletes requested show in database and redirects to Dasboard |
+| No. | Route   | URL               | HTTP Verb | Description                                                                      |
+| --- | ------- | ----------------- | --------- | -------------------------------------------------------------------------------- |
+| 1.  | Index   | /                 | GET       | Main App Landing Page                                                            |
+|     |         | /app              | GET       | App Dashboard                                                                    |
+| 2.  | New     | /sessions/new     | GET       | Log In Form                                                                      |
+|     |         | /users/new        | GET       | Sign Up Form                                                                     |
+|     |         | /app/new          | GET       | Add New Show Form                                                                |
+| 3.  | Create  | /sessions         | POST      | Authenticates credentials against database and redirect to Main App Landing Page |
+|     |         | /users            | POST      | Records new user into database and redirect to Main App Landing Page             |
+|     |         | /app              | POST      | Creates new show and redirect to App Dashboard                                   |
+| 4.  | Show    | /app/:showID      | GET       | Displays requested show                                                          |
+| 5.  | Edit    | /app/:showID/edit | GET       | Edit Show Form that reflects current show data in form                           |
+| 6.  | Update  | /app/:showID      | PUT       | Updates requested show and redirects to requested show page                      |
+| 7.  | Destroy | /sessions         | DELETE    | Destroys session and redirect to Main App Landing Page                           |
+|     |         | /app/:showID      | DELETE    | Deletes requested show in database and redirects to App Dasboard                 |
 
 ## Accomplishments:
 
@@ -125,5 +125,6 @@ https://show-stopper.herokuapp.com/
 ## Further Improvements:
 
 -   Split models and use reference instead
--   Social App: Different user interactions (e.g. commenting on other users' page)
+-   Social App: Different user interactions (e.g. comment on other users' page, follow other users)
+-   Filter shows (e.g. alphabetical order, completed, category etc.)
 -   Input option to upload photos instead of using url

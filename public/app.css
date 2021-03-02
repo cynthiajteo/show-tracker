@@ -11,8 +11,8 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     width: 90%;
-    height: 300px;
-    justify-content: space-around;
+    height: 350px;
+    justify-content: space-evenly;
     text-align: center;
 }
 
