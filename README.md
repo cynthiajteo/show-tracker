@@ -20,7 +20,7 @@ This app is designed to be a personal app targeted towards users who watch multi
 
 ## App Link:
 
-https://show-stopper.herokuapp.com/
+[Show Stopper](https://show-stopper.herokuapp.com/)
 
 ## Technologies Used:
 
