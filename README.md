@@ -69,7 +69,7 @@ https://show-stopper.herokuapp.com/
     ![New Show Form](img/wireframe/new.png)
 
 -   Edit Show
-    ~[Edit Show Form](img/wireframe/edit.png)
+    ![Edit Show Form](img/wireframe/edit.png)
 
 ## Screenshots:
 
