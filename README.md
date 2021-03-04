@@ -115,7 +115,6 @@ This app is designed to be a personal app targeted towards users who watch multi
 ## Accomplishments:
 
 -   The app meets the Minimum Viable Product's (MVP) requirements
--   User is able to create/edit/delete show
 
 ## Challenges:
 
