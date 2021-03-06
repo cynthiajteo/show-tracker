@@ -39,7 +39,7 @@ This app is designed to be a personal app targeted towards users who watch multi
 
 ## Objective:
 
--   Make a full CRUD (Create, Read, Update and Delete) using Node.js, MongoDB, Express and EJS that adheres to MVC (Models, Views, and Controllers) file structure
+-   Make a full CRUD (Create, Read, Update and Delete) app using Node.js, MongoDB, Express and EJS that adheres to MVC (Models, Views, and Controllers) file structure
 -   Use a CSS framework
 
 ## Approach Taken:
